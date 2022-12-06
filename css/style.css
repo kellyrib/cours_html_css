@@ -1,0 +1,139 @@
+/*
+dimensoins les plus vue en web:
+px => pixel
+em => cadratin: unite de mesure sur print sur les presses le cadratin se calcul par rapport a son parent
+rem=> cadratin racine : se calcule par rappoirt a la taille racine
+% => pourcentage se calcule par raport a l'element qui le contient
+vw & vh => viewport width et viewport heigth : correspond a la taille d'affcihage de la page en largeure te nhauteur
+si l'affichage en largeur 768px
+
+
+
+*/
+
+/*prend dans tout le navigateur*/
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    --orange-halloween:  rgb(194, 129, 9);
+    --header-bg-color: black;
+    --header-font-color:white;
+    --nav-princ-bg-color: black;
+    --nav-princ-font-color:white;
+    --nav-princ-font-link:rgba(255, 255, 255, 0.841);
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    
+}
+
+/* declaration generale*/
+
+/* formater la page */
+
+*,*::before, ::after {
+    box-sizing: border-box;
+}
+/*fin formater la page*/
+
+/* porpriete img*/
+
+img{
+    max-width: 100%;
+}
+h1{
+    margin:0;
+}
+
+
+.test-content-box div{
+    box-sizing: content-box;
+
+}
+.test-border-box div{
+    box-sizing: border-box;
+
+}
+.moitie{
+    width: 50%;
+    height: 50px;
+    border :1px solid black;
+    padding: 10px;
+    display: inline-block;
+}
+
+p::before{
+    content: '-->';
+}
+
+p::after{
+    content: '<--';
+}
+.deuxEm{
+    font-size: 2em;
+    border: 1px solid black;
+    padding: 25px;
+}
+
+.deuxRem{
+    font-size: 2rem;
+    border: 1px solid black;
+    padding: 20px;
+}
+/*h1{
+    color: var(--orange-halloween);
+}*/
+
+/*declaration sur l'architecture*/
+
+
+body> header{
+    /* > prend l'enfant direct */
+    color: var(--header-font-color);
+    background-color: var(--header-bg-color);
+    text-align: center;
+}
+body{
+    margin: 0;
+}
+body >nav, body>footer{
+    color: var(--nav-princ-font-color);
+    background-color:var(--nav-princ-bg-color);
+}
+body> nav ul, body>footer ul{
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    line-height: 2.5rem;
+
+}
+
+body> nav ul a, body> nav ul a:visited, body> footer ul a, body> footer ul a:visited {
+    color: var(--nav-princ-font-color);
+    text-decoration: none;
+    display: block;
+    padding-left: 25px;
+    border-bottom-width: 1px;
+    border-bottom-style:solid;
+    border-bottom-color: var(--nav-princ-font-link);
+}
+
+body> nav ul a:hover, body> nav ul a:focus, body> footer ul a:hover, body> footer ul a:focus{
+    background-color: var(--nav-princ-font-color);
+    color: var(--nav-princ-bg-color);
+}
+body>main{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body>main>section article{
+    padding: 1rem;;
+}
+body>footer h4{
+    text-align: center;
+}
+
+
+
+
+

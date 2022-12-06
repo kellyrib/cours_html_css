@@ -1,0 +1,19 @@
+body > main > section:not(section#carousel){
+    width: 180mm;
+    max-height: 250mm;
+    border: 1px solid black;
+    break-after: page;
+}
+
+img{
+    max-width:70mm;
+}
+
+figure{
+    float: left;
+}
+
+
+body>nav, button, body >footer, section#carousel{
+    display: none;
+}
