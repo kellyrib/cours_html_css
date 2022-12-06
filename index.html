@@ -2,127 +2,203 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 
-        ici on a aussi
-        -lien css
-        -appel des fichiers js
-        -
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formation HTML5 CSS3</title>
+    <!-- Commentaire en HTML -->
+    <!--
+        Ici on va aussi :
+            - lien CSS
+            - appel des fichiers JS
     -->
-    <link rel="stylesheet" href="./css/style.css" media="screen">
-    <link rel="stylesheet" href="./css/print.css" media="print">
-    <title>Formation html5 css3</title>
+    <script src="./js/swipper-bundle.js"></script>
+    <link rel="stylesheet" href="./css/swiper-bundle.css" media="screen">
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/print.css" media="print" />
+    <style>
+        .rouge-gras {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+        });
+    </script>
 </head>
 
 <body>
-
-    <header>
-        <h1>Titre 1</h1>
+    <header id="top">
+        <h1>Formation HTML5 - CSS3 - RWD</h1>
     </header>
     <nav>
         <ul>
-            <!--   li*8>a   -->
             <li><a href="./index.html">Accueil</a></li>
             <li><a href="./article.html">Article</a></li>
             <li><a href="./contact.html">Contact</a></li>
             <li><a href="./media.html">Media</a></li>
-            <li><a href="./animation.html">Animation</a></li>
-            <li><a href="./trucs.html">Trucs en css</a></li>
-            <li><a href="./grids.html">grids en css</a></li>
-            <li><a href="./bootstrap.html">Bootstraps</a></li>
+            <li><a href="./animation.html">Animations CSS</a></li>
+            <li><a href="./trucs.html">Des trucs en CSS</a></li>
+            <li><a href="./grid.html">Grid CSS</a></li>
+            <li><a href="./bootstrap.html">Bootstrap</a></li>
         </ul>
     </nav>
     <main>
         <section id="carousel">
-
+            <div class="carousel">
+                <div class="swiper">
+                    <div class="swiper-wrapper center-swipper">
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="./images/doc-signal.png" alt="">
+                                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorum</figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="./images/dolf-signal.png" alt="">
+                                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorum</figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="./images/drive-signal.png" alt="">
+                                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorum</figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="./images/james-white-composite.jpg" alt="">
+                                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorum</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
         </section>
         <section>
             <article>
                 <header>
-                    <h2>les balises de types paragraphes</h2>
+                    <h2>Les balises de type paragraphe</h2>
                 </header>
                 <main>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea consectetur minima quam mollitia
-                        perferendis veniam ipsa, rem quaerat libero laudantium eaque aliquam dolorem ratione blanditiis
-                        itaque beatae tenetur modi unde nam voluptate natus, praesentium facilis adipisci ut. Voluptatem
-                        alias id dolores deleniti. Consequatur soluta necessitatibus nihil, tempora nisi modi illum.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consectetur deleniti corrupti
+                        inventore iure, fugit aut perspiciatis voluptatem, non, est tempora cumque magni ipsam
+                        repellendus unde possimus tenetur ad iusto?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis excepturi vel eius, facilis
+                        aut commodi fugit voluptatem accusamus at sequi expedita impedit, assumenda saepe necessitatibus
+                        libero eaque ratione doloremque ipsum.
                     </p>
+                    <pre>
+Lorem ipsum dolor sit amet 
+consectetur adipisicing elit. 
+Nihil voluptatem hic at error 
+repellat reiciendis nesciunt 
+aspernatur ipsum quisquam! 
+Ratione quidem sed quis 
+temporibus ea distinctio, 
+fugit saepe vero sit?
+                    </pre>
+                </main>
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>Les balises de type paragraphe</h2>
+                </header>
+                <main>
                     <p>
-                        Lorem ipsum dolor,<code> sit amet consectetur adipisicing elit. </code>Error laudantium
-                        cupiditate quasi facilis quisquam laborum vero totam! Doloremque repellat eum officiis odio quia
-                        at harum!
+                        Lorem, ipsum dolor <code>sit amet consectetur adipisicing elit</code>. Saepe eius animi pariatur
+                        alias temporibus quibusdam quia veritatis tempore sint error dolores fuga, accusamus dolorem
+                        magnam debitis. Corrupti porro ipsam maxime!
                     </p>
                     <p>
                         <code>
-                            &lt;b&gt;
+                            &lt;b&gt;&lt;/b&gt; &eacute; &Eacute; &ocirc; &Ocirc;
                         </code>
                     </p>
                     <p>
                         &copy; &trade;
                     </p>
                     <blockquote>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta similique iusto neque commodi
-                        dignissimos consequatur, veniam voluptatum optio qui alias. Adipisci dicta provident consectetur
-                        magni quisquam nisi error nesciunt voluptatem amet saepe delectus a vitae reprehenderit
-                        asperiores, ut quos soluta recusandae tempore esse quia nobis dignissimos laudantium. Eveniet,
-                        cupiditate. Eum id qui consectetur exercitationem magnam dolorum eligendi. Maiores aliquam
-                        impedit voluptas alias assumenda perspiciatis, excepturi fugiat architecto fugit, necessitatibus
-                        odit, obcaecati omnis. Voluptas quisquam magnam perspiciatis odio itaque tenetur sed?
+                        <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, fugiat facere facilis
+                            dignissimos, quasi odio cupiditate quam vel sint voluptatem illo labore delectus nobis, est
+                            aperiam. Maiores harum esse amet!
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, beatae aspernatur
+                            repellendus ullam animi aliquam labore voluptatem nam voluptatibus corporis impedit at
+                            dolorum esse facilis expedita voluptas repellat molestiae ad?</q><br />
+                        <cite>Jules César</cite>
                     </blockquote>
-                    <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quam aperiam soluta, eveniet,
-                        eius consequatur doloribus consequuntur reprehenderit adipisci architecto rerum recusandae
-                        ratione omnis inventore. Harum ducimus reiciendis corporis similique, minus eaque molestias,
-                        nobis dignissimos consectetur dicta doloribus ipsa totam natus unde? Corrupti officiis aut
-                        assumenda quam magni est minima accusantium, doloremque, ratione minus reiciendis incidunt porro
-                        commodi repudiandae obcaecati! Iste doloribus dignissimos molestiae ipsum non maxime perferendis
-                        doloremque distinctio.</q><br>
-                    <cite>jules cesar</cite>
-
                 </main>
                 <footer>
-                    <a href="./article.html" title="lien vers l'article">
+                    <a href="./article.html" title="Lien vers l'article">
                         <button>
-                            lire la suite
+                            Lire la suite
                         </button>
                     </a>
                 </footer>
             </article>
             <article>
                 <header>
-                    <h2>quelques balises sur le text</h2>
+                    <h2>Quelques balises sur le texte</h2>
                 </header>
                 <main>
                     <p>
-                        il existe quelques balises pour changer l'apparence du texte.
-                        en <b>gras</b> ( b ou bold) qui n'a pas d'influence sur le seo. <br>
-                        en revanche la balise <strong>strong</strong>.
-                    </p>
-
-                    <p>
-                        de meme pour l'<i>italique</i> sans influence seo.
-                        alors que l'<em>emphase</em>
+                        IL existe quelques balises pour changer l'apparence du texte.
+                        En <b>gras</b> (b ou bold) qui n'a pas d'influence sur le SEO,
+                        en revanche, la balise <strong>strong</strong>.
                     </p>
                     <p>
-                        la balise <font color="#ff0000" size="6" face="Arial">texte</font> est decommissionnée, ils ne
-                        faut plus l'utiliser <br>
-                        a la place on utilise la balise <span class="rouge-gras">span</span> on ajoute du css dans une
-                        balise style dans le header est on lui change sa couleur, elle peut etre associé a une ou
+                        De même pour l'<i>italique</i> sans influence SEO, alors que l'<em>emphase</em>.
+                    </p>
+                    <p>
+                        La balise font <font color="#ff0000" size="6" face="Arial">texte</font> n'est plus utilisée,
+                        à la place on utilise la balise span <span class="rouge-gras">ma span</span> associée à une ou
                         plusieurs classes.
-
                     </p>
                     <p>
-                        on peut : <s>biffer</s> ou <u>souligner</u>, <mark>marquer</mark>.
+                        On peut : <s>biffer</s>, <u>souligner</u>, <mark>Marquer</mark>.
                     </p>
                     <p>
-                        H<sub>2</sub>SO <sub>4</sub><sup>2-</sup>
+                        H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>
                     </p>
                 </main>
                 <footer>
-                    <a href="./article.html" title="lien vers l'article">
+                    <a href="./article.html" title="Lien vers l'article">
                         <button>
-                            lire la suite
+                            Lire la suite
                         </button>
                     </a>
                 </footer>
@@ -131,41 +207,51 @@
         <section>
             <article>
                 <header>
-                    <h2>
-                        les images
-                    </h2>
-
+                    <h2>Les images</h2>
                 </header>
                 <main>
                     <p>
-                        par defaut ont utilise la balise img 
+                        Par défaut on utilise la balise img
                     </p>
-                    <img src="https://github.com/nicoduflot/2022-12-05-html-css-rwd/blob/main/images/city-black-n-white.png?raw=true" alt="ville en noir et blanc">
+                    <img src="./images/city-black-n-white.png" alt="Dessin d'une ville en noir et blanc" />
+                    <p>
+                        Avec HTML5, il existe une balise faîte pour encadrer sémantiquement des documents, ou média,
+                        avec l'option d'y adjoindre une légende, la balise figure.
+                    </p>
+                    <figure>
+                        <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" alt="wallpaper fallout 4" />
+                        <figcaption>
+                            Wallpaper fallout 4
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./images/Batman-The-animated-serie.jpg" alt="wallpaper fallout 4" />
+                        <figcaption>
+                            Wallpaper fallout 4
+                        </figcaption>
+                    </figure>
                 </main>
-
-                <p>
-                    avec html 5 il existe une balise faite pour encadrer semaniquement des documents media avec l'option d'y adjoindre une legende, la balise figure
-                </p>
-                <figure>
-                    <img src="https://raw.githubusercontent.com/nicoduflot/2022-12-05-html-css-rwd/70b9e262f926e8f4285573fb79e85067dd6753f8/images/Flag_of_England.svg" alt="England">
-                    <figcaption>
-                       Angleterre
-                    </figcaption>
-                </figure>
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
             </article>
             <article>
                 <header>
-                    <h2>les problemes courants en css</h2>
+                    <h2>Les problèmes courants en CSS</h2>
                 </header>
                 <main>
                     <p>
-                        les tailles des element sont par defaut calculés sur le contenu des elements
-                        si un paragraphe possede une bordure de 1px, une marge intereire( padding) de 5px
-                        et une largeur de 200px , la boite affcihée fera 2121px de large bordures comprise.
+                        Les tailles des éléments sont par défaut calculés sur le contenu des éléments.
+                        Si un paragraphe possède une bordure de 1px, une marge intérieure (padding) de 5px,
+                        et une largeur de 200px, la "boîte" affichée fera 212px de large bordures comprises.
                     </p>
-
                     <p>
-                        la definition par defaut du calcul box sizing est content box , si on veut la taille calculee depuis les bordure on doit la forcer a border box
+                        La définition par défaut du calcul "box-sizing" est "content-box", si on veut la taille calculée
+                        depuis les bordures, on doit la forcer à "border-box"
                     </p>
                     <div class="test-content-box">
                         <div class="moitie">az</div>
@@ -175,82 +261,131 @@
                         <div class="moitie">az</div>
                         <div class="moitie">az</div>
                     </div>
-
                     <p>
-                        les tailles calculees si vous voulez utiliser du cadratin( em), il est plus sure d'utiliser le rem car il sont tjs calcules par rapport au cadratin racine du user agent, non pas le cadratin calcule du conteneur
+                        Les tailles calculées : si vous voulez utiliser
+                        des cadratin (em), il est
+                        plus sûr d'utiliser les cadratins racine (rem)
+                        car il sont toujouts calculés
+                        par rapport au cadratin racine du user-agent (le style CSS du navigateur)
+                        et non pas le cadratin calculé du conteneur
                     </p>
-
                     <div class="deuxEm">
-                        deuxEm
+                        deux em
                         <div class="deuxEm">
-                            deuxEm
+                            deux em
                         </div>
-
                     </div>
                     <div class="deuxRem">
-                        deuxRem
+                        deux rem
                         <div class="deuxRem">
-                            deuxRem
+                            deux rem
                         </div>
-
                     </div>
-
-
                 </main>
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
             </article>
         </section>
-
+        <section>
+            <article>
+                <header>
+                    <h2>Les problèmes courants en CSS</h2>
+                </header>
+                <main>
+                    <p>
+                        Les tailles des éléments sont par défaut calculés sur le contenu des éléments.
+                        Si un paragraphe possède une bordure de 1px, une marge intérieure (padding) de 5px,
+                        et une largeur de 200px, la "boîte" affichée fera 212px de large bordures comprises.
+                    </p>
+                    <p>
+                        La définition par défaut du calcul "box-sizing" est "content-box", si on veut la taille calculée
+                        depuis les bordures, on doit la forcer à "border-box"
+                    </p>
+                    <div class="test-content-box">
+                        <div class="moitie">az</div>
+                        <div class="moitie">az</div>
+                    </div>
+                    <div class="test-border-box">
+                        <div class="moitie">az</div>
+                        <div class="moitie">az</div>
+                    </div>
+                    <p>
+                        Les tailles calculées : si vous voulez utiliser
+                        des cadratin (em), il est
+                        plus sûr d'utiliser les cadratins racine (rem)
+                        car il sont toujouts calculés
+                        par rapport au cadratin racine du user-agent (le style CSS du navigateur)
+                        et non pas le cadratin calculé du conteneur
+                    </p>
+                    <div class="deuxEm">
+                        deux em
+                        <div class="deuxEm">
+                            deux em
+                        </div>
+                    </div>
+                    <div class="deuxRem">
+                        deux rem
+                        <div class="deuxRem">
+                            deux rem
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <a href="./article.html" title="Lien vers l'article">
+                        <button>
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+        </section>
     </main>
-
     <footer>
         <div>
-            <h4>sitemaps</h4>
+            <h4>Sitemap</h4>
             <nav>
                 <ul>
-                    <!--   li*8>a   -->
                     <li><a href="./index.html">Accueil</a></li>
                     <li><a href="./article.html">Article</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                     <li><a href="./media.html">Media</a></li>
-                    <li><a href="./animation.html">Animation</a></li>
-                    <li><a href="./trucs.html">Trucs en css</a></li>
-                    <li><a href="./grids.html">grids en css</a></li>
-                    <li><a href="./bootstrap.html">Bootstraps</a></li>
+                    <li><a href="./animation.html">Animations CSS</a></li>
+                    <li><a href="./trucs.html">Des trucs en CSS</a></li>
+                    <li><a href="./grid.html">Grid CSS</a></li>
+                    <li><a href="./bootstrap.html">Bootstrap</a></li>
                 </ul>
             </nav>
         </div>
         <div>
-            <h4>liens institutionnels</h4>
+            <h4>Liens institutionnels</h4>
             <nav>
                 <ul>
-                    <!--   li*8>a   -->
                     <li><a href="#">CGV</a></li>
                     <li><a href="#">CGU</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Quisommes </a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">Qui sommes-nous</a></li>
                 </ul>
             </nav>
         </div>
         <div>
-            <h4>autres liens</h4>
+            <h4>Autres liens</h4>
             <nav>
                 <ul>
-                    <!--   li*8>a   -->
-                    <li><a href="#">lorem</a></li>
-                    <li><a href="#">lorem</a></li>
-                    <li><a href="#">lorem</a></li>
-                    <li><a href="#">lorem</a></li>
-                    <li><a href="#">lorem </a></li>
+                    <li><a href="#">bla bli blu</a></li>
+                    <li><a href="#">bla bli blu</a></li>
+                    <li><a href="#">bla bli blu</a></li>
+                    <li><a href="#">bla bli blu</a></li>
+                    <li><a href="#">bla bli blu</a></li>
                 </ul>
             </nav>
         </div>
-
-
-
     </footer>
-
-
 </body>
 
 </html>

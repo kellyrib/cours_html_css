@@ -1,139 +1,269 @@
 /*
-dimensoins les plus vue en web:
-px => pixel
-em => cadratin: unite de mesure sur print sur les presses le cadratin se calcul par rapport a son parent
-rem=> cadratin racine : se calcule par rappoirt a la taille racine
-% => pourcentage se calcule par raport a l'element qui le contient
-vw & vh => viewport width et viewport heigth : correspond a la taille d'affcihage de la page en largeure te nhauteur
-si l'affichage en largeur 768px
-
-
-
+dimension les plus vues en web :
+px      =>  Pixel
+em      =>  cadratin : unité de mesure en print sur les presses
+            le cadratin se calcul par rapport à son parent
+rem     =>  cadratin racine : se calcul par rapport à la taille racine de police
+%       =>  pourcentage, se calcule par rapport à l'élément qui le contient
+vw & vh =>  viewport width & viewport height : correspond à la taille 
+            d'affichage de la page en largeur et en hauteur
+            si affichage en largeur 768px alors 20vw = 153.6 px
+si 2em = 32 px, 1em = 16px
 */
 
-/*prend dans tout le navigateur*/
 :root{
     font-family: Arial, Helvetica, sans-serif;
-    --orange-halloween:  rgb(194, 129, 9);
+    --orange-halloween: #ff8c00;
     --header-bg-color: black;
-    --header-font-color:white;
+    --header-font-color: white;
     --nav-princ-bg-color: black;
-    --nav-princ-font-color:white;
-    --nav-princ-font-link:rgba(255, 255, 255, 0.841);
+    --nav-princ-font-color: white;
+    --nav-princ-border-link: rgba(255, 255, 255);
     font-size: 1.1rem;
     line-height: 1.6rem;
-    
+    --element-guter-size: 0.5rem;
+    --column-1-1: calc( 100% - calc( 2 * var(--element-guter-size)) );
+    --column-1-2: calc( 50% - calc( 2 * var(--element-guter-size)) );
+    --column-1-3: calc( 33% - calc( 2 * var(--element-guter-size)) );
+    --column-2-3: calc( 66% - calc( 2 * var(--element-guter-size)) );
+    --column-1-4: calc( 25% - calc( 2 * var(--element-guter-size)) );
+    --column-3-4: calc( 75% - calc( 2 * var(--element-guter-size)) );
 }
 
-/* declaration generale*/
+/* déclarations générales*/
 
-/* formater la page */
-
-*,*::before, ::after {
+*, *::before, *::after{
     box-sizing: border-box;
 }
-/*fin formater la page*/
 
-/* porpriete img*/
+h1{
+    margin: 0;
+}
 
 img{
     max-width: 100%;
 }
-h1{
-    margin:0;
-}
 
+/* classes */
 
 .test-content-box div{
     box-sizing: content-box;
-
 }
+
 .test-border-box div{
     box-sizing: border-box;
-
 }
+
 .moitie{
     width: 50%;
     height: 50px;
-    border :1px solid black;
+    border: 1px solid black;
     padding: 10px;
     display: inline-block;
 }
 
-p::before{
-    content: '-->';
-}
-
-p::after{
-    content: '<--';
-}
 .deuxEm{
     font-size: 2em;
     border: 1px solid black;
-    padding: 25px;
+    padding: 20px;
 }
-
 .deuxRem{
     font-size: 2rem;
     border: 1px solid black;
     padding: 20px;
 }
-/*h1{
-    color: var(--orange-halloween);
-}*/
-
-/*declaration sur l'architecture*/
-
-
-body> header{
-    /* > prend l'enfant direct */
-    color: var(--header-font-color);
-    background-color: var(--header-bg-color);
+.swiper-slide img {
+    max-height: 400px;
+}
+.center-swipper{
     text-align: center;
 }
+
+/* déclarations sur l'archi */
+
 body{
     margin: 0;
 }
-body >nav, body>footer{
-    color: var(--nav-princ-font-color);
-    background-color:var(--nav-princ-bg-color);
+
+body > header{
+    background-color: var(--header-bg-color);
+    color: var(--header-font-color);
+    text-align: center;
 }
-body> nav ul, body>footer ul{
+
+body > nav,
+body > footer{
+    background-color: var(--nav-princ-bg-color);
+    color: var(--nav-princ-font-color);
+}
+
+body > nav ul,
+body > footer ul{
     margin: 0;
     list-style-type: none;
     padding: 0;
     line-height: 2.5rem;
-
 }
 
-body> nav ul a, body> nav ul a:visited, body> footer ul a, body> footer ul a:visited {
+body > nav ul li,
+body > footer ul li{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--nav-princ-border-link);
+}
+
+body > nav ul a,
+body > nav ul a:visited,
+body > footer ul a,
+body > footer ul a:visited
+{
     color: var(--nav-princ-font-color);
     text-decoration: none;
     display: block;
     padding-left: 25px;
-    border-bottom-width: 1px;
-    border-bottom-style:solid;
-    border-bottom-color: var(--nav-princ-font-link);
+    padding-right: 25px;
 }
 
-body> nav ul a:hover, body> nav ul a:focus, body> footer ul a:hover, body> footer ul a:focus{
+body > nav ul li:last-child{
+    border-bottom: unset;
+}
+
+body > nav ul a:hover,
+body > nav ul a:focus,
+body > footer ul a:hover,
+body > footer ul a:focus
+{
     background-color: var(--nav-princ-font-color);
     color: var(--nav-princ-bg-color);
 }
-body>main{
+
+body > main,
+body > nav > ul,
+body > footer > div{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
-body>main>section article{
-    padding: 1rem;;
+body > main > section article{
+    padding: 1rem;
+    width: var(--column-1-1);
+    margin: var(--element-guter-size);
 }
-body>footer h4{
+
+body > footer ul{
+    line-height: 2rem;
+}
+
+body > footer h4{
     text-align: center;
 }
 
 
+/*
+@media print {
+    body > nav, button, body > footer{
+        display: none;
+    }
+}
+*/
 
+@media screen and (min-width: 576px){
+    body > main,
+    body > nav > ul,
+    body > footer > div{
+        width: 540px;
+    }
+}
 
+@media screen and (min-width: 768px){
+    body > main,
+    body > nav > ul,
+    body > footer > div{
+        width: 720px;
+    }
 
+    body > nav > ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    body > nav ul li{
+        border-bottom: unset;
+    }
+
+}
+
+@media screen and (min-width: 992px){
+    body > main,
+    body > nav > ul,
+    body > footer > div{
+        width: 960px;
+    }
+
+    body > main > section:not(#carousel){
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > main > section article{
+        width: var(--column-1-2);
+    }
+
+    body > main > section > article:last-child:nth-of-type(2n + 1){
+        width: var(--column-1-1);
+    }
+}
+
+@media screen and (min-width: 1200px){
+    body > main,
+    body > nav > ul,
+    body > footer > div{
+        width: 1140px;
+    }
+
+    body > main > section > article:last-child:nth-of-type(2n + 1){
+        width: var(--column-1-3);
+    }
+
+    body > main > section article{
+        width: var(--column-1-3);
+    }
+
+    body > main > section > article:last-child:nth-of-type(3n + 2){
+        width: var(--column-2-3);
+    }
+
+    body > main > section > article:last-child:nth-of-type(3n + 1){
+        width: var(--column-1-1);
+    }
+}
+
+@media screen and (min-width: 1400px){
+    body > main,
+    body > nav > ul,
+    body > footer > div{
+        width: 1320px;
+    }
+}
+
+@media screen and (min-width: 1600px){
+    body > main,
+    body > nav > ul,
+    body > footer > div{
+        width: 1500px;
+    }
+
+    body > main > section article{
+        width: var(--column-1-4);
+    }
+
+    body > main > section > article:last-child:nth-of-type(4n + 3){
+        width: var(--column-1-2);
+    }
+
+    body > main > section > article:last-child:nth-of-type(4n + 2){
+        width: var(--column-3-4);
+    }
+}
