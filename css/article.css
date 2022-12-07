@@ -35,6 +35,11 @@ hr {
 }
 .figure1 img{
     box-shadow: 2px 2px 12px 2px #4C3973;
+    
+}
+img:hover{
+    transform:rotateY(180deg);
+    
 }
 
 
@@ -49,6 +54,7 @@ aside {
 
 .premier {
     background-color: #F21BA7;
+    
 }
 
 .deuxieme {
