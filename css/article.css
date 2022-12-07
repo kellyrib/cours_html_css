@@ -1,0 +1,113 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    text-shadow: #e7f6ff 0 -1px 0,
+        #D91E75 1px 1px 0,
+        #F21BA7 2px 2px 0,
+        #4C3973 3px 3px 0,
+        #F2B90F 4px 4px 0,
+        #F26835 5px 5px 0,
+        #333 5px 5px 10px;
+    color: #348ABF;
+
+
+}
+h3{
+    color: #F2B90F;
+}
+
+hr {
+    box-shadow: 2px 2px 12px 2px #000000;
+    color: #348ABF;
+    
+}
+
+.figure2 img{
+    box-shadow: 2px 2px 12px 2px #F26835;
+}
+.figure1 img{
+    box-shadow: 2px 2px 12px 2px #4C3973;
+}
+
+
+
+
+
+aside {
+
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.premier {
+    background-color: #F21BA7;
+}
+
+.deuxieme {
+    background-color: #4C3973;
+}
+
+.troisieme {
+    background-color: #F26835;
+}
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {
+    figure {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .test {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .information {
+        max-width: var(--column-1-4);
+    }
+
+    .content {
+        max-width: var(--column-3-4);
+
+    }
+
+    .figure1 {
+        float: right;
+    }
+
+    .figure2 {
+        float: left;
+    }
+
+    aside p {
+
+        padding: 1.5rem;
+
+    }
+
+    p {
+        text-align: justify;
+    }
+
+
+}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}
+
+@media screen and (min-width: 1600px) {}
